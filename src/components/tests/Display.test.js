@@ -42,5 +42,5 @@ test('renders show season options matching your data when the button is clicked'
     await waitFor(()=>{
         const seasonOptions = screen.queryAllByTestId('season-option');
         expect(seasonOptions).toHaveLength(3)
-    });
+    })
 });
