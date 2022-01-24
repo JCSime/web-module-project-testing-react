@@ -35,7 +35,7 @@ test("renders the summary test passed as prop", ()=>{
 });
 
 test("renders default image when image is not defined", ()=>{
-    // render(<Episode episode={[]} image={null}/>);
-    // const testerImg = screen.getAllByRole('img');
-    // expect(testerImg).toHaveLength(1);
+    render(<Episode episode={testEpisodeWithoutImage}/>);
+    const image = screen.queryByAltText('https://i.ibb.co/2FsfXqM/stranger-things.png');
+    expect(image).toBeInTheDocument();
 });
